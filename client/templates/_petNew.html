@@ -1,0 +1,16 @@
+<template name="_petNew">
+  {{#ionModal customTemplate=true}}
+    {{#autoForm collection="Pets" id="pet-new-form" type="insert"}}
+      <div class="bar bar-header bar-assertive">
+        <button data-dismiss="modal" type="button" class="button button-assertive">Cancelar</button>
+        <h2 class="title">Nueva mascota perdida</h2>
+        <button type="submit" class="button button-assertive">Agregar</button>
+      </div>
+      <div class="content has-header overflow-scroll">
+        {{> afQuickField name="type"}}
+        {{> afQuickField name="gender"}}
+        {{> afQuickField name="location"}}
+      </div>
+    {{/autoForm}}
+  {{/ionModal}}
+</template>

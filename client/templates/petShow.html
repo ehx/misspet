@@ -1,0 +1,41 @@
+<template name="petShow">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="petsList" text="Listado"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Detalles</h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear" data-ion-modal="_petEdit" data-id="{{pet._id}}">Editar</button>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent class="padding contact-detail"}}
+      {{#with pet}}
+        <div class="list card">
+          <div class="item item-avatar">
+            <img src="http://www.gravatar.com/avatar/{{id}}.jpg?d=mm&s=200">
+            <h2>{{location}}</h2>
+            <p>{{timeAgo}}</p>
+          </div>
+          <div class="item item-body">
+            <img class="full-image" src="http://www.gravatar.com/avatar/{{id}}.jpg?d=monsterid&s=250">
+            <h2>{{type}} {{gender}}</h2>
+          </div>
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="{{pathFor 'chat' _chatRoom=_id}}">
+              <i class="icon ion-chatbox"></i>
+              Chatear
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-thumbsup"></i>
+              Reclamar
+            </a>
+          </div>
+        </div>
+      {{/with}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

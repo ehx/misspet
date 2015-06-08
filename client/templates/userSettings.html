@@ -1,0 +1,14 @@
+<template name="userSettings">
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Configuracion</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent class="padding contact-detail"}}
+        {{#autoForm collection='Meteor.users' doc=userActual type='update' id="userSettingsForm"}}
+          {{> afQuickField name='profile'}}
+          <button type="submit" class="button button-full button-assertive" data-action="showLoading">Guardar</button>
+      {{/autoForm}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

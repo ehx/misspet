@@ -1,0 +1,9 @@
+<template name="layoutTabs">
+  {{#ionBody}}
+    {{> ionNavBar class="bar-assertive"}}
+    {{#ionNavView}}
+      {{> yield}}
+      {{> _tabs}}
+    {{/ionNavView}}
+  {{/ionBody}}
+</template>

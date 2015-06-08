@@ -1,0 +1,15 @@
+<template name="_petEdit">
+  {{#ionModal customTemplate=true}}
+    {{#autoForm collection="Pets" doc=pet id="pet-edit-form" type="update"}}
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">Cancelar</button>
+        <h2 class="title">Editar</h2>
+        <button type="submit" class="button button-positive button-clear">Guardar</button>
+      </div>
+      <div class="content has-header overflow-scroll">
+        {{> afQuickField name="type"}}
+        {{> afQuickField name="gender"}}
+      </div>
+    {{/autoForm}}
+  {{/ionModal}}
+</template>

@@ -1,0 +1,30 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+insecure
+iron:router
+zimme:active-route
+matb33:collection-hooks
+aldeed:collection2
+aldeed:autoform
+meteoric:ionic-sass
+meteoric:ionicons-sass
+meteoric:ionic
+meteoric:autoform-ionic
+useraccounts:ionic
+dburles:collection-helpers
+anti:fake
+autopublish
+mrt:moment
+service-configuration
+accounts-twitter
+accounts-facebook
+accounts-google
+mikael:accounts-merge
+standard-app-packages
+ryanswrt:chapp
+accounts-ui
