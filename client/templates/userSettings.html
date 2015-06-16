@@ -5,10 +5,19 @@
 
   {{#ionView}}
     {{#ionContent class="padding contact-detail"}}
-        {{#autoForm collection='Meteor.users' doc=userActual type='update' id="userSettingsForm"}}
-          {{> afQuickField name='profile'}}
-          <button type="submit" class="button button-full button-assertive" data-action="showLoading">Guardar</button>
-      {{/autoForm}}
+      <div class="list card">
+        <div class="item item-body">
+          <img src="{{userActual.avatar}}" class="full-image">
+          <button type="submit" class="button button-full button-assertive photo">Cambiar foto perfil</button>
+          {{#autoForm collection="UserProfile" doc=userActual type='update' id="userSettingsForm"}}
+            {{> afQuickField name='name'}}
+            {{> afQuickField name='gender'}}
+            {{> afQuickField name='location'}}
+            {{> afQuickField name='phoneNumber'}}
+            <button type="submit" class="button button-full button-assertive" data-action="showLoading">Guardar</button>
+          {{/autoForm}}
+        </div>
+      </div>
     {{/ionContent}}
   {{/ionView}}
 </template>

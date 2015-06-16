@@ -13,8 +13,8 @@
         {{#each pets}}
           {{#ionItem path="petShow" buttonRight=true class="item-icon-right"}}
             <i class="flaticon-{{type}}{{gender}}"></i>
-            {{location}}
-            {{> ionIcon icon="ios-arrow-forward" class="positive"}}
+            {{location.city}}
+            {{> ionIcon icon="ios-arrow-forward" class="dark"}}
           {{/ionItem}}
         {{/each}}
       {{/ionList}}

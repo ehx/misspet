@@ -1,4 +1,8 @@
 $loading-font-size: 22px;
+$assertive: #6a5acd !default;
+$bar-assertive-border: #6a5acd !default;
+$button-assertive-border: #6a5acd !default;
+$dark: #6a5acd !default;
 
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
@@ -11,4 +15,8 @@ $loading-font-size: 22px;
   position: absolute; 
   bottom: 0px; 
   width: 100%   
+}
+
+.pac-container {
+  pointer-events: auto;
 }

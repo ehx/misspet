@@ -18,7 +18,6 @@ meteoric:autoform-ionic
 useraccounts:ionic
 dburles:collection-helpers
 anti:fake
-autopublish
 mrt:moment
 service-configuration
 accounts-twitter
@@ -28,3 +27,5 @@ mikael:accounts-merge
 standard-app-packages
 ryanswrt:chapp
 accounts-ui
+abdj:autoform-google-places-input
+mdg:camera

@@ -20,8 +20,8 @@ Template.petShow.helpers({
 Template.petShow.events({
     'click .tab-item': function(){
       pet = Pets.findOne({_id: Router.current().params._id});
-      nameUser = Meteor.user().profile.firstName + ' ' + Meteor.user().profile.lastName;
-      Session.set('chapp-username', nameUser); //you could set the user name on user login
+      var user = UserProfile.findOne({idUser: Meteor.userId()})
+      Session.set('chapp-username', user.name); //you could set the user name on user login
       chatRoom = pet._id;
       Session.set('chapp-docid', chatRoom); //The room identifier. Iron router's before action can be a great spot to set this.
       Session.set('chapp-historysince',new Date()); //Limit messages based on the date they were posted

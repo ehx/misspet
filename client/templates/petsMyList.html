@@ -1,6 +1,6 @@
 <template name="petsMyList">
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Lista de mascotas perdidas</h1>
+    <h1 class="title">Lista de coincidencias</h1>
   {{/contentFor}}
 
   {{#ionView}}
@@ -9,7 +9,7 @@
         {{#each pets}}
           {{#ionItem path="petShow" buttonRight=true class="item-icon-right"}}
             <i class="flaticon-{{type}}{{gender}}"></i>
-            {{location}}
+            {{location.city}}
             {{> ionIcon icon="ios-arrow-forward" class="positive"}}
           {{/ionItem}}
         {{/each}}
